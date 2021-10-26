@@ -3,16 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Лабораторная работа 7</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 70%;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h2>Лабораторная работа 7</h2>
@@ -27,7 +18,7 @@
 <button onclick="f1()">Start</button>
 <br>
 <b>Задание 16</b>
-<p>Создать объект футбольная команда с ключами Николай, Андрей, Петри т.д. с элементами 'вратарь', 'нападаю-щий',
+<p>Создать объект футбольная команда с ключами Николай, Андрей, Петри т.д. с элементами 'вратарь', 'нападающий',
     'правый защитник' и т.д. С помощью цикла for-in вывести на экран строки такого формата:'Николай - вратарь'.и
     т.д.</p>
 <button onclick="f2()">Start</button>
@@ -35,34 +26,88 @@
 <h3>События</h3>
 <hr>
 <b>Задание 6</b>
-<p>Создать кнопку с надписью «yes». При наведении мы-ши на кнопку меняется запись и ее цвет, при выведении все
+<p>Создать кнопку с надписью «yes». При наведении мыши на кнопку меняется запись и ее цвет, при выведении все
     возвращается в начальное положение</p>
-<button onclick="f3()">Start</button>
+<button id="butt">Yes</button>
+<button class="butt" onmouseover="f6()">Yes</button>
 <br>
 <b>Задание 16</b>
-<p>Используя функцию, изменить текст элемента < p > при нажатии на кнопку.</p>
-<button onclick="f4()">Start</button>
+<p id="p1">Используя функцию, изменить текст элемента < p > при нажатии на кнопку.</p>
+<button onclick="f3()">Start</button>
+
+<div id="cons" class="console">
+</div>
+
 <hr>
 <script>
+    function p(msg) {
+        cons.innerHTML = "<p>" + msg + "</p>" + cons.innerHTML
+    }
+
     function f1() {
-        var a = prompt("Введи цвет", "blue/green/yellow");
-        var col = new Array();
-        col["blue"] = "синий";
-        col["green"] = "зеленый";
-        col["yellow"] = "желтый";
-        alert(col[a])
+        let user1 = {
+            subjects: [
+                {title: "blue", col: "синий"},
+                {title: "green", col: "зеленый"},
+                {title: "yellow", col: "желтый"},
+            ],
+            show_info: function () {
+                let s = ""
+                for (let k in this.subjects) {
+                    let sub = this.subjects[k]
+                    s += sub.title + " - " + sub.col + "<br>"
+                }
+                p(s)
+            }
+        }
+        user1.show_info()
     }
+
     function f2() {
-
-        alert()
+        let user2 = {
+            subjects: [
+                {title: "Николай", pose: "вратарь"},
+                {title: "Андрей", pose: "нападающий"},
+                {title: "Петри", pose: "правый защитник"},
+            ],
+            show_info: function () {
+                let s = ""
+                for (let k in this.subjects) {
+                    let sub = this.subjects[k]
+                    s += sub.title + " - " + sub.pose + "<br>"
+                }
+                p(s)
+            }
+        }
+        user2.show_info()
     }
+
+    butt = document.getElementById("butt")
+
+    butt.onmouseenter = function () {
+        butt.textContent = 'no'
+    }
+    butt.onmouseleave = function () {
+        butt.textContent = 'Yes'
+    }
+
+    function f6() {
+        const but = document.querySelector('button.butt');
+        but.onmouseover = logMouseOver;
+        but.onmouseout = logMouseOut;
+
+        function logMouseOver() {
+            but.textContent = 'DONT TOUCH ME!!!';
+        }
+
+        function logMouseOut() {
+            but.textContent = 'GO OUT!!!';
+        }
+    }
+
     function f3() {
-
-        alert()
-    }
-    function f4() {
-
-        alert()
+        var text = prompt("Введи новый текст");
+        document.getElementById("p1").innerHTML=text
     }
 </script>
 </body>
