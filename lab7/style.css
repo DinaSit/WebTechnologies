@@ -1,0 +1,38 @@
+* {
+    /*Говорим, что ширину надо считать с учетом паддингов и бордеров*/
+    box-sizing: border-box;
+}
+
+.container {
+    width: 720px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: darkred;
+    border: yellow;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: crimson;
+}
+
+.console {
+    font-family: monospace;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid #333;
+    padding: 10px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.console p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.mouse-in {
+    font-weight: 600;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Лабораторная работа 7</h1>
+    <h2>Консоль:</h2>
+    <div id="cons" class="console">
+        &lt;div&gt;
+    </div>
+    <h2>Видео с Youtube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0tiCeQW4m_0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <button onclick="alert('button has been clicked')">Button</button>
+</div>
+<script>
+    cons = document.getElementById("cons")
+
+    function p(msg) {
+        cons.innerHTML = "<p>" + msg + "</p>" + cons.innerHTML
+    }
+
+    cons.onmouseenter = function () {
+        cons.classList.add("mouse-in")
+    }
+
+    cons.onmouseleave = function () {
+        cons.classList.remove("mouse-in")
+    }
+
+    cons.on
+
+    function objects_part() {
+
+        // JSON
+        let user = {};
+        p(user)
+
+        user.age = 20
+        user.name = "Student"
+        user.show_info = () => {
+            p("Name: " + user.name + " Age:" + user.age)
+        }
+
+        user.show_info()
+
+        let name = "Петя"
+
+        let user2 = {
+            // <поле>: <значение>,
+            name: "Вася",
+            age: 20,
+            display: function () {
+                p("Name: " + this.name + " Age:" + this.age)
+            }
+        }
+
+        user2.display()
+
+        let user3 = {}
+        user3["name"] = "Оля"
+        user3["age"] = 20
+        user3["show_info"] = function () {
+            p("Name: " + this.name + " Age:" + this.age)
+        }
+        user3.show_info()
+        user3["show_info"]()
+
+        let user4 = {
+            name: "Иван",
+            age: 20,
+            subjects: [
+                {title: "Web", course: 2},
+                {title: "Логическое программирование", course: 2},
+                {title: "Анализ данных", course: 3},
+                {title: "Проектирование систем", course: 3},
+            ],
+            show_info: function () {
+                let s = ""
+                s += this.name + " изучает следующие предметы: <br>"
+                for (let k in this.subjects) {
+                    let sub = this.subjects[k]
+                    s += "&nbsp;&nbsp;" + sub.title + " на " + sub.course + " курсе<br>"
+                }
+                p(s)
+            }
+        }
+
+        user4.show_info()
+
+        // delete user4.show_info
+
+        for (let k in user4) {
+            p(k + ": <br>" + user4[k] + "<br>")
+        }
+    }
+
+    objects_part()
+
+</script>
+</body>
+</html>

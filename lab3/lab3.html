@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 3</title>
+    <link rel="stylesheet" href="style.lab3.css">
+    <script src="functions.js"></script>
+</head>
+<body>
+<h2>Лабораторная работа 3</h2>
+<p><small>Ситникова Диана, НПИбд-01-20, 1032201746</small></p>
+<hr>
+<h2>Пример 5</h2>
+<form action="">
+    <div>
+        <label for="input-text-id">Ваше имя:</label>
+        <input type="text" id="input-text-id">
+    </div>
+    <div>
+        <label for="item1">Мужчина</label>
+        <input type="radio" name="radioBlock1" id="item1">
+    </div>
+    <div>
+        <label for="item2">Женщина</label>
+        <input type="radio" name="radioBlock1" id="item2">
+    </div>
+    <div>
+        <label for="input-text-id-children">Детей</label>
+        <input type="text" id="input-text-id-children">
+    </div>
+    <div>
+        <label for="input-text-id-country">Страна</label>
+        <input type="text" id="input-text-id-country">
+    </div>
+    <div>
+        <ul>
+            <li><label for="cbi1">Украина</label>
+                <input type="checkbox" name="cb1" id="cbi1"></li>
+            <li><label for="cbi2">Россия</label>
+                <input type="checkbox" name="cb1" id="cbi2"></li>
+            <li><label for="textarea">Другая</label>
+                <textarea id="textarea"></textarea></li>
+        </ul>
+    </div>
+    <div>
+        <label for="input-text-id-email">Электронный адрес:</label>
+        <input type="text" id="input-text-id-email">
+    </div>
+    Для подтверждения ввода нажмите на кнопку SUBMIT. <br>
+    Для сброса введённых данных нажмите на кнопку RESET. <br>
+    <div>
+        <button><u>S</u>ubmit</button>
+        <button><u>R</u>eset</button>
+    </div>
+</form>
+<h2>Пример 6</h2>
+<form action="">
+    Данные о пользователе
+    <div>
+        Имя: <br>
+        <input type="text">
+    </div>
+    <div>
+        Фамилия: <br>
+        <input type="text">
+    </div>
+    <div>
+        Отчество: <br>
+        <input type="text">
+    </div>
+    <p>Укажите ваш пол:</p>
+    <div>
+        <input type="radio" name="gender2" id="gender1">
+        <label for="gender1">Мужской</label>
+    </div>
+    <div>
+        <input type="radio" name="gender2" id="gender2">
+        <label for="gender2">Женский</label>
+    </div>
+    <p>Анкета:</p>
+    Как вы относитесь к тому, чтобы стать химиком: <br>
+    <div>
+        <input type="checkbox" name="cb2" id="1">
+        <label for="1">Положительно, всегда хотел им стать</label>
+    </div>
+    <div>
+        <input type="checkbox" name="cb2" id="2">
+        <label for="2">Безразлично, никогда не думал об этом серьёзно</label>
+    </div>
+    <div>
+        <input type="checkbox" name="cb2" id="3">
+        <label for="3">Отрицательно, меня с детства отталкивают мысли об этом</label>
+    </div>
+</form>
+<hr>
+
+<div class="container">
+    <div>
+        <h3>Задание 1</h3>
+        <button onclick="f1()">Вызвать функцию</button>
+    </div>
+    <div>
+        <h3>Задание 2</h3>
+        <button onclick="f2()">Вызвать функцию</button>
+    </div>
+    <div>
+        <h3>Задание 3</h3>
+        <p id="a"></p>
+        <p id="b"></p>
+        <p id="c"></p>
+        <p id="d"></p>
+        <button onclick="f3()">Вызвать функцию</button>
+    </div>
+    <div>
+        <h3>Задание 4</h3>
+        <button onclick="f4()">Вызвать функцию</button>
+    </div>
+    <div>
+        <h3>Задание 5</h3>
+        <button onclick="f5()">Вызвать функцию</button>
+    </div>
+    <div>
+        <h3>Задание 6</h3>
+        <button onclick="f6()">Вызвать функцию</button>
+    </div>
+    <div>
+        <h3>Задание 7</h3>
+        <button onclick="f7()">Вызвать функцию</button>
+    </div>
+    <p id="ID1">Это первый абзац на странице. </p>
+    <p id="ID2"> Это второй абзац на странице. </p>
+    <p id="ID3"> Это третий абзац на странице. </p>
+</div>
+</body>
+</html>

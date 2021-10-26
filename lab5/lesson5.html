@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Лабораторная работа 5</h1>
+    <h2>Консоль:</h2>
+    <div id="cons" class="console">
+
+    </div>
+</div>
+<script>
+    cons = document.getElementById("cons")
+
+    function p(msg) {
+        cons.innerHTML = "<p>" + msg + "</p>" + cons.innerHTML
+    }
+
+    // let rexp = new RegExp("hello")
+    let rexp = /hello/
+    /*
+        g - global
+        i - case insensitive
+     */
+
+    let s = "Hello, world! Hello, world... hello world world hello"
+    p(s.replace(rexp, "bye"))
+    p(s.replace(/hello/g, "bye"))
+    p(s.replace(/hello/gi, "bye"))
+    p(s.replace(/hello/i, "bye"))
+    p(rexp.test(s))
+    p(/12/.test(s))
+
+</script>
+</body>
+</html>

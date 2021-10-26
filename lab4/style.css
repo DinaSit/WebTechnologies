@@ -1,0 +1,19 @@
+* {
+    /*Говорим, что ширину надо считать с учетом паддингов и бордеров*/
+    box-sizing: border-box;
+}
+
+.container {
+    width: 720px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: darkred;
+    border: yellow;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: crimson;
+}

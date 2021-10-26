@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 70%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<h2>Лабораторная работа 5</h2>
+<p><small>Ситникова Диана, НПИбд-01-20, 1032201746</small></p>
+
+<hr>
+<h3>Массивы(блок1)</h3>
+<hr>
+<b>Задание 6.</b>
+Переменная lang может принимать 2 значения: 'ru' и
+'en'. Если она имеет значение 'ru', то в переменную arr записать массив дней недели на русском языке, а если имеет
+значение 'en' – то на английском. Решить задачу, используя два оператора if. <br>
+<button onclick="f1()">Start</button>
+<br>
+<b>Задание 13.</b>
+Пусть многомерный массив arr содержит названия цветов по-русски и по-английски. Ввести название цвета по порусски и
+получить его английский эквивалент и наоборот. <br>
+<button onclick="f2()">Start</button>
+<hr>
+
+<h3>Массивы(блок2)</h3>
+<hr>
+<b>Задание 6.</b>
+Написать скрипт, который сортирует массив чисел следующим образом: сначала располагаются числа, которые
+делятся на 2,потом на 3 и т.д. Сортировку оформить в виде функции, поместив ее в части head html-файла. Cоздать объект
+типа Array и отсортировать его соответствующим образом, используя функцию этого класса. <br>
+<button onclick="f3()">Start</button>
+<br>
+<b>Задание 13.</b>
+Написать скрипт, который удаляет из массива четные числа. Операцию оформить в виде функции, поместив ее в jsфайл.
+Cоздать объект типа Array и выполнить над ним соответствующие действия, используя функцию этого класса. <br>
+<button onclick="f4()">Start</button>
+<hr>
+
+<h3>Функции</h3>
+<hr>
+<b>Задание 2.</b>
+Составить функцию, значением которой было бы наименьшее общее кратное всех натуральных чисел от 1 до n включительно (n –
+параметр функции). <br>
+<button onclick="f5()">Start</button>
+<br>
+<b>Задание 14.</b>
+Создать функцию arrayFill(), которая будет заполнять массив заданными значениями. Первым параметром функция принимает
+значение, которым заполнять массив, а вторым - сколько элементов должно быть в массиве. Например, arrayFill('x', 5)
+сделает массив ['x', 'x', 'x', 'x', 'x']. <br>
+<button onclick="f6()">Start</button>
+
+<script>
+    function f1() {
+        var a = prompt("Выбери язык", "ru/en");
+        if (a == 'ru')
+            var arr = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"];
+        if (a == 'en')
+            var arr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sunday", "Saturday"];
+        alert(arr)
+    }
+
+    function f2() {
+        var a = prompt("Введи название цвета", "blue/green/yellow/синий/зеленый/желтый");
+        var col = new Array();
+        col["blue"] = "синий";
+        col["green"] = "зеленый";
+        col["yellow"] = "желтый";
+        col["синий"] = "blue";
+        col["зеленый"] = "green";
+        col["желтый"] = "yellow";
+        alert(col[a])
+    }
+
+    function f3() {
+        var a = prompt("Задай количество чисел");
+        var arr = new Array();
+        for (var i = 0; i < a; i++) {
+            var n = prompt("Наполняй массив числами");
+            if (n % 2 == 0)
+                arr.unshift(n)
+            else
+                arr.push(n)
+        }
+        alert(arr)
+    }
+
+    function f4() {
+        var a = prompt("Задай количество чисел");
+        var arr = new Array();
+        for (var i = 0; i < a; i++) {
+            var n = prompt("Наполняй массив числами");
+            if (n % 2 != 0)
+                arr.push(n)
+        }
+        alert(arr)
+    }
+
+    function f5() {
+        var n = prompt("Введи n");
+        var arr = new Array();
+        for (var i = 1; i <= n; i++)
+            arr.push(i)
+        var  a = Math.abs(arr[0]);
+        for (var i = 1; i < n; i++) {
+            var b = Math.abs(arr[ i ]), c = a;
+            while (a && b){ a > b ? a %= b : b %= a; }
+            a = Math.abs(c*arr[ i ])/(a+b);
+        }
+        alert("НОК всех натуральных чисел от 1 до " + n + ": " + a)
+    }
+
+    function f6() {
+        var a = prompt("Введи значение, которым заполнять массив");
+        var n = prompt("Cколько элементов должно быть в массиве?");
+
+        function arrayFill(a, n) {
+            var arr = new Array();
+            for (var i = 0; i < n; i++)
+                arr.push(a)
+            return arr;
+        }
+
+        alert(arrayFill(a, n))
+    }
+</script>
+</body>
+</html>

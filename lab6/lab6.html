@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 6</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 70%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<h2>Лабораторная работа 6</h2>
+<p><small>Ситникова Диана, НПИбд-01-20, 1032201746</small></p>
+<hr>
+
+<h3>Cтроки в JavaScript</h3>
+<hr>
+<b>Задание 6</b>
+<p>В переменной date лежит дата в формате'2025-12-31'. Преобразовать эту дату в формат '31/12/2025'.</p>
+<button onclick="f1()">Start</button>
+<br>
+<b>Задание 16</b>
+<p>Подсчитать количество слов во введенной строке, найти длину максимального слова, минимального слова и среднюю длину
+    слов. Предусмотреть возможность присутствия в тексте нескольких пробелов и знаков препинания.</p>
+<button onclick="f2()">Start</button>
+<hr>
+<h3>Регулярные выражения. Методы классаRegExp</h3>
+<hr>
+<b>Задание 6</b>
+<p>Дана строка 'aa aba abba abbba abca abea'. Написать регулярное выражение, которое найдет строки aa, aba по
+    шаблону: буква 'a', буква 'b' один раз или ни одного, буква 'a'.</p>
+<button onclick="f3()">Start</button>
+<br>
+<b>Задание 16</b>
+<p>Дана строка 'aa aba abba abbba abbbba abbbbba'. Написать регулярное выражение, которое найдет строки вида aba, в
+    которых 'b' встречается не менее 4-х раз.</p>
+<button onclick="f4()">Start</button>
+<br>
+<b>Задание 26</b>
+<p>Написать регулярное выражение, которое найдет строки следующего вида: по краям стоят буквы 'a', а между ними – буква
+    от a до g.</p>
+<button onclick="f5()">Start</button>
+<hr>
+<script>
+    function f1() {
+        var date = prompt("Введи дату", "2025-12-31");
+        alert(date.substr(8, 2) + "." + date.substr(5, 2) + "/" + date.substr(0, 4))
+    }
+
+    function f2() {
+        var a = prompt("Введи строку");
+        var p = new RegExp(/[A-Za-zА-Яа-я]+/, "g");
+        var Mass = [];
+        Mass = a.match(p);
+        var col = 0;
+        var max = 0;
+        var min = 10000;
+        var maxlen = 0;
+
+        for (var i = 0; i < Mass.length; i++){
+            var n = Mass[i].length
+            if (n > max)
+                max = n
+            if (n < min)
+                min = n
+            maxlen += n
+        }
+        alert("Длина максимального слова " + max + " минимального слова " + min + " средняя длина слов " + maxlen / Mass.length)
+    }
+
+    function f3() {
+        var a = prompt("Введи строку", "aa aba abba abbba abca abea");
+        var p = new RegExp(/ab?a/, "g");
+        var Mass = [];
+        Mass = a.match(p);
+        alert(Mass)
+    }
+
+    function f4() {
+        var a = prompt("Введи строку", "aa aba abba abbba abbbba abbbbba");
+        var p = new RegExp(/abbbb+a/, "g");
+        var Mass = [];
+        Mass = a.match(p);
+        alert(Mass)
+    }
+
+    function f5() {
+        var a = prompt("Введи строку");
+        var p = new RegExp(/a[a-g]a/, "g");
+        var Mass = [];
+        Mass = a.match(p);
+        alert(Mass)
+    }
+</script>
+</body>
+</html>

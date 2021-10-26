@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth; /*мягкая прокрутка*/
+}
+.a {
+    font-style: italic;
+    margin: 10px;
+}
+.b {
+    font-style: italic;
+}
+.content {
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 5px;
+    font-size: 95%;
+}
+p {
+    font-family: "Roboto Light", sans-serif;
+    font-size: smaller;
+}
+img {
+    max-width: 400px; /*максимальная ширина картинки*/
+}
+table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #a2a9b1;
+    border-collapse: collapse;
+}
+table tr th.top {
+    background-color: #eaf3ff;
+}
+.population th {
+    background-color: #cfe3ff;
+    border: 1px solid #a2a9b1;
+}
+.population td {
+    border: 1px solid #a2a9b1;
+}
+body img.Hell {
+    padding: 10px;
+    float: right; /*обтекание картинки текстом*/
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Занятие 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="document-title">Лабораторная работа 2</h1>
+</div>
+<hr>
+<h1>Шрифт с засечками: SansSerif, serif</h1>
+<h2>Шрифт без засечек: sans-serif</h2>
+<h3>Шрифт: Comic Sans MS</h3>
+<hr>
+<p>
+    <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi aperiam delectus dolor eaque illo illum
+        inventore itaque necessitatibus neque obcaecati, porro quos, ratione recusandae repellendus sapiente sequi
+        similique voluptate?</b>
+</p>
+<hr>
+<div class="container">
+    <table class="top-table">
+        <tr>
+            <th>Фамилия Имя Отчество</th>
+            <th>Дата рождения</th>
+        </tr>
+        <tr>
+            <td>Иванов Иван</td>
+            <td>12.12.12</td>
+        </tr>
+        <tr>
+            <td class="blue-cell">Петров Петр</td>
+            <td class="blue-cell vat">01.01.01</td>
+        </tr>
+    </table>
+    <br>
+    <table class="top-table">
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th rowspan="3">3</th>
+            <th>4</th>
+        </tr>
+        <tr>
+            <td class="blue-cell" colspan="2">1</td>
+            <td>2</td>
+            <td class="blue-cell">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="blue-cell">2</td>
+            <td>3</td>
+            <td class="blue-cell">4</td>
+        </tr>
+        <tr>
+            <td class="blue-cell">1</td>
+            <td>2</td>
+            <td class="blue-cell">3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <table class="spanned-table">
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th rowspan="3">3</th>
+            <th>4</th>
+        </tr>
+        <tr>
+            <td colspan="2">1</td>
+            <!--<td>2</td>-->
+            <!--<td>3</td>-->
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <!--<td>3</td>-->
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <h2>Списки</h2>
+    <p>
+        Это список неправильный: <br>
+        - первый элемент <br>
+        - второй элемент <br>
+        - третий элемент <br>
+    </p>
+    <p>Отображение элементов булетами: </p>
+    <ul>
+        <li>контент</li>
+        <li>контент</li>
+        <li>контент</li>
+    </ul>
+    <p>Упорядоченный список:</p>
+    <ol reversed> <!--перевернутый список-->
+        <li>контент</li>
+        <ol start="7"> <!--список с 7 элемента-->
+            <li>контент</li>
+            <li>контент</li>
+            <li value="1">контент</li> <!--элемент насильно ставший первым в конце-->
+        </ol>
+        <li>контент</li>
+        <li>контент</li>
+        <ul>
+            <li>контент</li>
+            <li>контент</li>
+        </ul>
+    </ol>
+
+    <img src="https://a.d-cd.net/nRAAAgN6KuA-480.jpg" alt="Альтернативный текст">
+    <h2>Картинка с компа</h2>
+    <img src="imgs/kartinka.jpg" alt="Да">
+    <h2>Картинка с текстом</h2>
+    <p>
+        <img src="https://a.d-cd.net/nRAAAgN6KuA-480.jpg" alt="Альтернативный текст">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci alias commodi consequatur consequuntur debitis dolor ea est fugiat itaque magnam molestias neque perferendis possimus, praesentium, recusandae repudiandae totam vel.</span><span>Aliquid eligendi, eveniet id maiores maxime nam quasi quos reiciendis sunt. Accusantium atque consequuntur dicta doloribus ipsum maxime natus neque nostrum officiis perferendis quae, quod, quos repellendus rerum saepe voluptate!</span>
+    </p>
+    <br>
+    <h2>Ссылки</h2>
+    <a href="https://www.youtube.com/watch?v=5qap5aO4i9A">lofi hip hop radio - beats to relax/study</a>
+    <a href="https://www.youtube.com/watch?v=5qap5aO4i9A">
+        <img src="https://i.ytimg.com/vi/5qap5aO4i9A/maxresdefault.jpg" alt="">
+    </a>
+    <a href="#document-title">В начало страницы</a>
+</div>
+<p>
+    tr - строка таблицы <br>
+    th - заголовки <br>
+    td - ячейки <br>
+    ctrl+shift+-> быстрое выделение слова целиком <br>
+    tag*2 + tab быстрое создание двух тегов <br>
+    tr>td + tab создаст тег tr внутри которого будет td <br>
+    это все можно комбинировать <br>
+</p>
+</body>
+</html>

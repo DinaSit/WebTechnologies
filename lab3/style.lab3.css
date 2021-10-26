@@ -1,0 +1,19 @@
+* {
+    /*Говорим, что ширину надо считать с учетом паддингов и бордеров */
+    box-sizing: border-box;
+}
+body {
+    width: 70%;
+    margin: 0 auto;
+}
+
+form {
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    background-color: lightcyan;
+}
+
+form div {
+    margin: 10px 0;
+}

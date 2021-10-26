@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="ui_nums" type="text">
+<button onclick="handleArray()">Parse array</button>
+<p id="pid">Text</p>
+<script>
+    function f1() {
+        let m = 10, n = 10
+        let array = []
+        for (let i = 0; i < m; ++i) {
+            let row = []
+            for (let i = 0; i < n; ++i) {
+                row.push(i + 1)
+            }
+            array.push(row)
+        }
+        console.log(array)
+    }
+
+    function handleArray() {
+        let usersInput = document.getElementById("ui_nums").value
+        let array = toArray(usersInput)
+        document.getElementById('pid').innerHTML = calcOnArray(array)
+    }
+
+    function toArray(usersInput) {
+        let snums = usersInput.split(' ')
+        let array = []
+        for (let key in snums) {
+            if (snums[key].length > 0) {
+                array.push(parseInt(snums[key]))
+            }
+        }
+        return array
+    }
+
+    function calcOnArray(array) {
+        let  s = 0
+        for (let i in array) {
+            s += array[i]
+        }
+        return s
+    }
+
+</script>
+</body>
+</html>

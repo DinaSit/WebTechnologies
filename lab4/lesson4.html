@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Лабораторная работа 4</h1>
+    <p id="p1">Параграф 1</p>
+    <p id="p2">Параграф 2</p>
+    <p id="p3">Параграф 3</p>
+    <button onclick="f1()">Задание 1</button>
+    <button onclick="f2()">Задание 2</button>
+
+</div>
+<script>
+    function f1() {
+        // Переменные
+        let age = 20;
+        let age_str = "Пенсионный возраст";
+        // Числовые, логические, строковые
+        /* Операции:
+            Арифметические (+ - * / % ++ --)
+            Присваивание (= += *= -=)
+            Сравнения (== != сравнения по значению) (=== !== сравнения по значению и по типу) > < <= >=
+            Логические (&& || !)
+         */
+        let a = 0;
+        // alert('Первое сравнение')
+        // if (a == 0) {
+        //     alert('Равно!');
+        // }
+        // else {
+        //     alert('Не равно!');
+        // }
+        // alert('Второе сравнение')
+        usersInput = "5";
+        parsedUsersNumber = parseInt(usersInput);
+        // if (parsedUsersNumber == 5) alert('YES!');
+        // if (parsedUsersNumber == 6) alert('YES!'); else alert('NO!');
+        // alert(parsedUsersNumber);
+        // if (parsedUsersNumber == 5) {
+        //     alert('Равно!');
+        // }
+        // else {
+        //     alert('Не равно!');
+        // }
+        // alert('Третье сравнение')
+        // a = '0'
+        // if (a === 0) {
+        //     alert('Равно!');
+        // }
+        // else {
+        //     alert('Не равно!');
+        // }
+        switch (parsedUsersNumber) {
+            case 1: {
+                alert('1')
+                break;
+            }
+            case 5: {
+                alert('5')
+                break;
+            }
+            default: {
+                alert('default')
+            }
+        }
+
+        let s = "";
+        let i = 0;
+        while (i++ < 10) {
+            s += i;
+        }
+        alert(s);
+        do {
+            // do smth
+            console.log('Inside do .. while loop');
+        } while (i++ < 20);
+
+        console.log('Testing for loop');
+        for (let step = 0; step < 5; step++) {
+            // Runs 5 times, with values of step 0 through 4.
+            console.log('Walking east one step');
+        }
+
+        for (v in s) {
+            // v - index в строке
+            // s[v] - символ
+            console.log(s[v]);
+            if (s[v] == 1) {
+                alert('Found 1 in s');
+            }
+        }
+    }
+
+    function f2() {
+        let a;
+        // alert(a);
+
+        a = null;
+        // alert(undefined == null);
+        a = NaN;
+        // alert(a);
+        a = Number("-56.15")
+        // alert(a);
+        // alert(a.toFixed(1))
+        // alert(a.toFixed(0))
+        // alert(a.toFixed(10))
+        // alert(Math.round(a));
+        // alert(Math.floor(a));
+        // alert(Math.ceil(a));
+        // alert(Math.round(100 + Math.random() * 100))
+    }
+
+    f2();
+</script>
+</body>
+</html>

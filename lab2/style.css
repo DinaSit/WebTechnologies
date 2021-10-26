@@ -1,0 +1,87 @@
+html {
+    scroll-behavior: smooth; /*мягкая прокрутка*/
+}
+h1 {
+    font-family: "Times New Roman", SansSerif, serif;
+    color: darkgreen;
+}
+h2 {
+    font-family: "Roboto Light", sans-serif;
+    color: darkgreen;
+}
+h3 {
+    font-family: "Comic Sans MS";
+    color: darkgreen;
+}
+p {
+    font-family: 'Zen Kurenaido', sans-serif;
+    color: darkgreen;
+}
+.container {
+    width: 720px;
+    margin: 0 auto;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid black;
+}
+
+/*тег.класс*/
+table.top-table {
+    border-collapse: collapse; /*меняет стиль отступа между таблицей и строками */
+    /* border-collapse: separate;
+    border-spacing: 20px; */ /*пустой широкий бордер*/
+    width: 200px;
+    height: 150px;
+    background-color: lightgreen;
+    /* border-width: 4px;
+    border-color: darkgreen;
+    border-style: solid; */
+    border: 1px solid darkgreen; /*если поставить больше пикселей, то ширина перекроет синий цвет на количество пикселей минус пиксели синего*/
+    /*border-radius: 10px;*/
+    /*border-radius: 50%;*/ /* мутит круг */
+}
+
+.top-table td, .top-table th {
+    border: 1px solid darkblue;
+}
+
+.top-table tr {
+    vertical-align: bottom; /*надписи прижмутся книзу по возможности размеров таблицы*/
+}
+
+.top-table td {
+    vertical-align: top;
+}
+
+.top-table .blue-cell {
+    background-color: lightgoldenrodyellow;
+}
+.top-table .vat {
+    vertical-align: bottom;
+}
+.spanned-table {
+    margin-top: 50px;
+    background-color: lightcyan;
+    width: 300px;
+    height: 150px;
+}
+ul {
+    list-style-type: circle;
+}
+ol {
+    list-style-type: upper-roman;
+}
+ol ol {
+    list-style-type: upper-alpha;
+}
+img {
+    max-width: 700px; /*максимальная ширина картинки*/
+}
+p img {
+    padding: 10px;
+    float: left; /*обтекание картинки текстом*/
+}

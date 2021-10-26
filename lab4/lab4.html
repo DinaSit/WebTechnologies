@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 4</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 70%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<h2>Лабораторная работа 4</h2>
+<p><small>Ситникова Диана, НПИбд-01-20, 1032201746</small></p>
+<hr>
+<h3>Задание 6</h3>
+<p>
+    Создать страницу, которая предлагает пользователю ввести число, а затем выводит кубы всех чисел от 1 до введенного
+    числа при условии, что они не превосходят 1000. <br>
+    Воспользоваться:
+<ul>
+    <li>циклом for;</li>
+    <li>циклом while;</li>
+    <li>циклом do while.</li>
+</ul>
+<button onclick="f1()">Start</button>
+</p>
+<h3>Задание 16</h3>
+<p>
+    Вывести на экран таблицу умножения (как в школьной тетради).
+    <button onclick="f2()">Start</button>
+<h3>Задание 26</h3>
+<p>
+    С помощью двух вложенных циклов нарисовать следующую пирамидку: <br>
+    1 <br>
+    22 <br>
+    333 <br>
+    4444 <br>
+    55555 <br>
+    666666 <br>
+    7777777 <br>
+    88888888 <br>
+    999999999 <br>
+    <button onclick="f3()">Start</button>
+</p>
+<script>
+    function f1() {
+        var f = prompt("Введи число")
+        var a = parseInt(f)
+        var res = ''
+        if (a <= 1000)
+            for (var i = 1; i <= a; i++)
+                res += i*i*i + '\n';
+        alert(res)
+    }
+
+    function f2() {
+        var result = '     ';
+
+        function buff(val) {
+            var buff = '';
+            var pad = 4 - val;
+            while (pad-- > 0)
+                buff += ' ';
+            return buff;
+        }
+
+        for (var i = 0; i <= 10; i++) {
+            for (var j = 0; j <= 10; j++) {
+                if (i == 0 && j > 0) {
+                    result += '[' + j + ']' + buff((j + '').length + 2);
+                } else if (j == 0 && i > 0) {
+                    result += '[' + i + ']';
+                } else if (i > 0 && j > 0) {
+                    result += buff((i * j + '').length) + i * j;
+                }
+            }
+            result += '\n'
+        }
+        alert(result)
+    }
+
+    function f3() {
+        var res = ''
+        for (var i = 1; i < 10; i++) {
+            for (var j = 1; j <= i; j++)
+                res += i
+            res += '\n'
+        }
+        alert(res)
+    }
+</script>
+</body>
+</html>

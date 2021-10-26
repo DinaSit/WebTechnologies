@@ -1,0 +1,72 @@
+* {
+    /*Говорим, что ширину надо считать с учетом паддингов и бордеров */
+    box-sizing: border-box;
+}
+.block-element {
+    background-color: lightgreen;
+    border: 2px solid blue;
+    padding: 20px;
+    /*width: 300px;*/
+    width: 50%;
+    /*margin: 0 auto; !* при заданной ширине margin-left = margin-right *!*/
+    text-align: center;
+}
+.inline-element {
+    margin: 10px; /*ширина и высота неприменимы к данным элементам*/
+    width: 100px;
+    border: 2px solid red;
+}
+.right {
+    text-align: right;
+}
+
+.inline-block {
+    display: inline-block;
+    border: 2px solid red;
+}
+
+/*
+div.class
+div .class
+*/
+
+th {
+    background-color: lightgoldenrodyellow;
+    font-style: italic;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+form {
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    background-color: lightcyan;
+}
+
+form div {
+    margin: 10px 0;
+}
+
+/*input {*/
+/*    background-color: crimson;*/
+/*}*/
+
+span.und {
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: crimson;
+}
+
+button:focus {
+    background-color: yellow;
+}
+
+.add-class {
+    font-size: 26px;
+}

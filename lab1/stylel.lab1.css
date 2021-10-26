@@ -1,3 +1,6 @@
 span {
     color: blue;
 }
+ul {
+    list-style-type: disc;
+}

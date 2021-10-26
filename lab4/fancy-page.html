@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .board {
+      width: 360px;
+      height: 240px;
+      margin: 3em auto 0;
+      border: 2px solid lightskyblue;
+    }
+  </style>
+</head>
+<body>
+<div class="board" onmousemove="mm.apply(this, arguments)"></div>
+<script>
+  function mm(e) {
+    let rect = e.target.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+
+    let r = Math.round(255 * x / rect.width);
+    let g = Math.round(255 * y / rect.height);
+    let b = Math.round(255 - (r + g) / 2);
+
+    this.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+  }
+</script>
+</body>
+</html>
